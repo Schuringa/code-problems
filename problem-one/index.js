@@ -61,7 +61,10 @@ const run = async () => {
   const pageBody = await extractor(pageHtml)
 
   // Search for word
-  const wordArray = pageBody.text.match(new RegExp(`\\b${word}`, 'g')) || []
+  const wordArray =
+    pageBody.text
+      .toLowerCase()
+      .match(new RegExp(`\\b${word.toLowerCase()}`, 'g')) || []
 
   console.log(
     chalk.green(
