@@ -1,0 +1,57 @@
+<div class="container">
+  <div id="element" class="element"></div>
+  <form class="myForm" id="myForm">
+    <label for="width">width:</label>
+    <input id="width" type="text" name="width" />
+
+    <label for="height">height:</label>
+    <input id="height" type="text" name="height" />
+
+    <label for="x-axis">x-axis:</label>
+    <input id="x-axis" type="text" name="x-axis" />
+
+    <label for="y-axis">y-axis:</label>
+    <input id="y-axis" type="text" name="y-axis" />
+
+    <input type="submit" />
+  </form>
+</div>
+
+<script>
+  var form_el = document.getElementById('myForm');
+  var black_el = document.getElementById('element');
+  var width = document.getElementById('width');
+  var height = document.getElementById('height');
+  var xAxis = document.getElementById('x-axis');
+  var yAxis = document.getElementById('y-axis');
+
+  form_el.addEventListener('submit', function(evt) {
+    evt.preventDefault();
+    manipulate();
+  });
+
+  function manipulate() {
+    console.log('testing');
+    if (width) {
+      black_el.style.width = width;
+      console.log(black_el.style);
+    }
+  }
+</script>
+
+<style type="text/css">
+  .container {
+    text-align: center;
+  }
+  .myForm {
+    padding: 2em 0 0 0;
+  }
+  .element {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: black;
+    height: 200px;
+    width: 200px;
+  }
+</style>
