@@ -4,14 +4,17 @@ module.exports = {
     ecmaVersion: 2017,
     sourceType: 'module'
   },
-  plugins: ['ember'],
-  extends: ['eslint:recommended', 'plugin:ember/recommended'],
+  plugins: [
+    'ember'
+  ],
+  extends: [
+    'eslint:recommended',
+    'plugin:ember/recommended'
+  ],
   env: {
-    browser: true,
-    amd: true
+    browser: true
   },
   rules: {
-    semi: [2, 'never']
   },
   overrides: [
     // node files
@@ -36,4 +39,4 @@ module.exports = {
       }
     }
   ]
-}
+};
