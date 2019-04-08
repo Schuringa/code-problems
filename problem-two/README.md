@@ -1,23 +1,52 @@
-# Problem 2
+# Problem one
 
-Create an amortization calculator that demonstrates an amortization schedule. Take in principle, number of months and annual interest rate.
+Write a simple script that accepts a single word and URL that then returns the number of instances the word is found at the destination URL.
 
-Return the following:
+## Prerequisites
 
-a. Total Repaid
+You will need the following things properly installed on your computer.
 
-b. Total Interest Paid
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/) (with npm)
+- [Ember CLI](https://ember-cli.com/)
+- [Google Chrome](https://google.com/chrome/)
 
-c. Amortization Schedule (table)
+## Installation
 
-i. Payment Number (1,2,3,etc)
+- `git clone <repository-url>` this repository
+- `cd ember-quickstart`
+- `npm install`
 
-ii. Principal
+## Running / Development
 
-iii. Interest
+- `ember serve`
+- Visit your app at [http://localhost:4200](http://localhost:4200).
+- Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
-iv. Cumulative Principal
+### Code Generators
 
-v. Cumulative Interest
+Make use of the many generators for code, try `ember help generate` for more details
 
-vi. Principal Balance
+### Running Tests
+
+- `ember test`
+- `ember test --server`
+
+### Linting
+
+- `npm run lint:hbs`
+- `npm run lint:js`
+- `npm run lint:js -- --fix`
+
+### Building
+
+- `ember build` (development)
+- `ember build --environment production` (production)
+
+## Further Reading / Useful Links
+
+- [ember.js](https://emberjs.com/)
+- [ember-cli](https://ember-cli.com/)
+- Development Browser Extensions
+  - [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
+  - [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
