@@ -4,9 +4,12 @@
   "description": "Write a simple script that accepts a single word and URL that then returns the number of instances the word is found at the destination URL.",
   "main": "index.js",
   "dependencies": {
+    "chalk": "^2.4.2",
+    "figlet": "^1.2.1",
     "inquirer": "^6.2.2",
     "request": "^2.88.0",
-    "request-promise": "^4.2.4"
+    "request-promise": "^4.2.4",
+    "unfluff": "^3.2.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
