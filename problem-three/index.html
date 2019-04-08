@@ -1,24 +1,26 @@
 <div class="container">
   <div id="element" class="element"></div>
-  <form class="myForm" id="myForm">
-    <label for="width">width:</label>
-    <input id="width" type="text" name="width" />
+  <div class="my-form">
+    <form id="my-form">
+      <label for="width">width:</label>
+      <input id="width" type="text" name="width" />
 
-    <label for="height">height:</label>
-    <input id="height" type="text" name="height" />
+      <label for="height">height:</label>
+      <input id="height" type="text" name="height" />
 
-    <label for="x-axis">x-axis:</label>
-    <input id="x-axis" type="text" name="x-axis" />
+      <label for="x-axis">x-axis:</label>
+      <input id="x-axis" type="text" name="x-axis" />
 
-    <label for="y-axis">y-axis:</label>
-    <input id="y-axis" type="text" name="y-axis" />
+      <label for="y-axis">y-axis:</label>
+      <input id="y-axis" type="text" name="y-axis" />
 
-    <input type="submit" />
-  </form>
+      <input type="submit" />
+    </form>
+  </div>
 </div>
 
 <script>
-  var form_el = document.getElementById('myForm');
+  var form_el = document.getElementById('my-form');
   var black_el = document.getElementById('element');
   var width = document.getElementById('width');
   var height = document.getElementById('height');
@@ -31,27 +33,46 @@
   });
 
   function manipulate() {
-    console.log('testing');
-    if (width) {
-      black_el.style.width = width;
-      console.log(black_el.style);
+    if (width.value) {
+      black_el.style.width = width.value;
+    } else {
+      black_el.style.width = 0;
+    }
+    if (height.value) {
+      black_el.style.height = height.value;
+    } else {
+      black_el.style.height = 0;
+    }
+    if (xAxis.value) {
+      black_el.style.left = xAxis.value;
+    } else {
+      black_el.style.left = 0;
+    }
+    if (yAxis.value) {
+      black_el.style.bottom = yAxis.value;
+    } else {
+      black_el.style.bottom = 0;
     }
   }
 </script>
 
 <style type="text/css">
   .container {
-    text-align: center;
+    height: 100%;
   }
-  .myForm {
+  .my-form {
+    position: absolute;
+    background: white;
     padding: 2em 0 0 0;
+    z-index: 99;
+    top: 0;
   }
   .element {
+    position: absolute;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     background: black;
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
+    bottom: 10;
   }
 </style>
