@@ -1,0 +1,11 @@
+{
+  "name": "problem-two",
+  "version": "1.0.0",
+  "description": "Create an amortization calculator that demonstrates an amortization schedule. Take in principle, number of months and annual interest rate.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
