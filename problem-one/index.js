@@ -28,7 +28,7 @@ const askQuestions = () => {
       type: 'input',
       message: 'What is the URL you want to search?',
       validate: function validateUrl (url) {
-        const expression = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi
+        const expression = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/gi
         const regex = new RegExp(expression)
         return url.match(regex) !== null
       }
@@ -50,7 +50,7 @@ const askQuestions = () => {
 const run = async () => {
   // show script introduction
   displayBanner()
-  
+
   // ask questions
   const answers = await askQuestions()
   const { word, url } = answers
@@ -59,7 +59,7 @@ const run = async () => {
   const pageHtml = await rp(url)
 
   // Search HTML response
-  const pageBody = await extractor(pageHtml)
+  const pageBody = await extractor(pageHtml, 'en')
 
   // Search for word
   const wordArray =
