@@ -12,12 +12,6 @@ Nodes js 10.15.3 LTS or greater
 
 ### Installing
 
-Clone repository
-
-```
-git clone https://github.com/Schuringa/code-problems.git
-```
-
 Install dependencies
 
 ```
