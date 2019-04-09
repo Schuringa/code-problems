@@ -2,7 +2,7 @@ const inquirer = require('inquirer')
 const rp = require('request-promise')
 const chalk = require('chalk')
 const figlet = require('figlet')
-const extractor = require('unfluff')
+const cheerio = require('cheerio')
 
 const displayBanner = () => {
   console.log(
@@ -58,14 +58,14 @@ const run = async () => {
   // Get url html response
   const pageHtml = await rp(url)
 
-  // Search HTML response
-  const pageBody = await extractor(pageHtml, 'en')
+  // Load the HTML code as a string, which returns a Cheerio instance
+  const $ = cheerio.load(pageHtml)
+  const pageText = $('body')
 
   // Search for word
   const wordArray =
-    pageBody.text
-      .toLowerCase()
-      .match(new RegExp(`\\b${word.toLowerCase()}`, 'g')) || []
+  pageText.toLowerCase()
+    .match(new RegExp(`\\b${word.toLowerCase()}`, 'g')) || []
 
   console.log(
     chalk.green(
