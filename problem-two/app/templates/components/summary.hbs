@@ -1,5 +1,21 @@
-<div class='box'>
-  <h5 class="subtitle is-5">Loan Summary</h5>
-  <SummaryItem @value={{'$1,656.61'}} @title={{'Monthly Payment'}} />
+<div class="box">
+  <p class="is-size-4 is-marginless">Loan Summary</p>
+  <hr>
+  <div class="columns">
+    <div class="column">
+      <SummaryItem @value={{"$1,656.61"}} @title={{"Monthly Payment"}} />
+    </div>
+    <div class="column">
+      <SummaryItem @value={{"$596,380"}} @title={{"Total Payment"}} />
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column">
+      <SummaryItem @value={{"$296,380"}} @title={{"Interest Paid"}} />
+    </div>
+    <div class="column">
+      <SummaryItem @value={{"Mar, 2049"}} @title={{"Pay-off Date"}} />
+    </div>
+  </div>
 </div>
 {{yield}}
