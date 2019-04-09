@@ -4,7 +4,7 @@ const chalk = require('chalk')
 const figlet = require('figlet')
 const extractor = require('unfluff')
 
-const init = () => {
+const displayBanner = () => {
   console.log(
     chalk.green(
       figlet.textSync('Problem One', {
@@ -49,7 +49,7 @@ const askQuestions = () => {
 
 const run = async () => {
   // show script introduction
-  init()
+  displayBanner()
   
   // ask questions
   const answers = await askQuestions()
