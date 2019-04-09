@@ -50,6 +50,7 @@ const askQuestions = () => {
 const run = async () => {
   // show script introduction
   init()
+  
   // ask questions
   const answers = await askQuestions()
   const { word, url } = answers
