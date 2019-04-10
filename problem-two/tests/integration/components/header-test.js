@@ -8,19 +8,11 @@ module('Integration | Component | header', function(hooks) {
 
   test('it renders', async function(assert) {
     // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+    this.set('title', 'Amortization Calculator')
+    this.set('subtitle', 'Jordan Schuringa')
 
-    await render(hbs`{{header}}`)
+    await render(hbs`{{header title=title subtitle=subtitle}}`)
 
     assert.equal(this.element.textContent.trim(), '')
-
-    // Template block usage:
-    await render(hbs`
-      {{#header}}
-        template block text
-      {{/header}}
-    `)
-
-    assert.equal(this.element.textContent.trim(), 'template block text')
   })
 })
