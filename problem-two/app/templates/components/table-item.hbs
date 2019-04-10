@@ -1,8 +1,8 @@
 <div class="columns">
   <div class="column">{{this.id}}</div>
-  <div class="column">${{this.principal}}</div>
-  <div class="column">${{this.interest}}</div>
-  <div class="column">${{this.cumulativePrincipal}}</div>
-  <div class="column">${{this.cumulativeInterest}}</div>
-  <div class="column">${{this.balance}}</div>
+  <div class="column">${{format-currency this.principal}}</div>
+  <div class="column">${{format-currency this.interest}}</div>
+  <div class="column">${{format-currency this.cumulativePrincipal}}</div>
+  <div class="column">${{format-currency this.cumulativeInterest}}</div>
+  <div class="column">${{format-currency this.balance}}</div>
 </div>
