@@ -21,11 +21,9 @@
       <p class="is-size-6 has-text-weight-semibold"> Principal Balance</p>
     </div>
   </div>
-  <TableItem />
-  <TableItem />
-  <TableItem />
-  <TableItem />
-  <TableItem />
-  <TableItem />
-  <TableItem />
+  {{#each payments as |payment| }}
+  <TableItem @id={{payment.id}} @principal={{payment.principal}} @interest={{payment.interest}}
+    @balance={{payment.balance}} @cumulativePrincipal={{payment.cumulativePrincipal}}
+    @cumulativeInterest={{payment.cumulativeInterest}} />
+  {{/each}}
 </div>

@@ -1,13 +1,13 @@
 <div class="columns">
   <div class="column">
-    <Calculator @onSubmit={{route-action "onSubmit"}} />
+    <Calculator @onSubmit={{action "onSubmit"}} />
   </div>
   <div class="column">
-    <Summary />
+    <Summary @payment={{this.payment}} @totalPayment={{this.totalPayment}} @totalInterest={{this.totalInterest}} />
   </div>
 </div>
 <div class="columns">
   <div class="column">
-    <Table />
+    <Table @payments={{this.payments}} />
   </div>
 </div>
