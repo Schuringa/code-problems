@@ -60,7 +60,7 @@ const run = async () => {
 
   // Load the HTML code as a string, which returns a Cheerio instance
   const $ = cheerio.load(pageHtml)
-  const pageText = $('body')
+  const pageText = $('body').text()
 
   // Search for word
   const wordArray =
